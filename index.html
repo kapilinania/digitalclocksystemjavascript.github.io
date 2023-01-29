@@ -13,9 +13,10 @@
         padding: 0px;
     }
 
-    .video {
+    .img {
         width: 100% !important;
-        height: auto !important;
+        height: 745px !important;
+        background-size: cover;
     }
 
     .main {
@@ -34,63 +35,103 @@
         border-radius: 10px;
         border: 1px dotted blue;
         font-weight: 600;
-        animation: kapil 1s infinite;
+        animation: kapil 5s infinite;
 
     }
 
     @keyframes kapil {
         from {
-            background-color: rgba(0, 212, 255, 0.1);
+            background-color: rgba(248, 216, 7, 0.1);
             color: white;
-            
+
         }
 
         to {
-            background-color: rgba(0, 212, 255, 0.2);
+            background-color: rgb(246, 206, 7);
             color: white;
-            
+
         }
 
     }
-    .Digital_Clock{
-            position: absolute;
-            top: 30%;
-            left: 10%;
-            width: 80%;
-            border: 0px solid red;
-            display: flex;
-            justify-content: space-between;
-        }
-        .one{
-            width: 33%;
-            border: 0px solid blue;
-            color: white;
-            font-size: 30px;
-            font-family: sans-serif;
-            background-color: rgba(0, 212, 255, 0.1);
-            margin: 15px;
-            border-radius: 10px;
-        }
-        .time{
-            text-align: center;
-            margin: 10px 0px 5px 0px;
-        }
-        .jscode{
-            color: white;
-            font-size: 30px;
-            margin:15px 0px 15px 0px;
-            text-align: center;
-        }
+
+    .Digital_Clock {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        width: 80%;
+        border: 0px solid red;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .one {
+        width: 33%;
+        border: 0px solid blue;
+        color: white;
+        font-size: 30px;
+        font-family: sans-serif;
+        background-color: rgba(0, 212, 255, 0.9);
+        margin: 15px;
+        border-radius: 10px;
+    }
+
+    .time {
+        text-align: center;
+        margin: 10px 0px 5px 0px;
+    }
+
+    .jscode {
+        color: white;
+        font-size: 30px;
+        margin: 15px 0px 15px 0px;
+        text-align: center;
+    }
+
+    @media (min-width: 300px) and (max-width: 768px) {
+        .digital {
+        position: absolute;
+        top: 5%;
+        left: 0%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        background-color: rgba(51, 51, 51, 0.5);
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px dotted blue;
+        font-weight: 600;
+        margin: 20px;
+    }
+    .Digital_Clock {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        width: 80%;
+        border: 0px solid red;
+       display: flex;
+       flex-direction: column;
+        justify-content: space-between;
+    }
+    .one {
+        width: 100%;
+        border: 0px solid blue;
+        color: white;
+        font-size: 30px;
+        font-family: sans-serif;
+        background-color: rgba(0, 212, 255, 0.9);
+        margin: 0px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+        
+    }
 </style>
 
 <body>
 
     <div class="main">
         <div>
-            <video controls autoplay class="video">
-                <source src="video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <img src="https://source.unsplash.com/random/?Technology/" alt="" class="img">
         </div>
         <div class="digital"> Digital Clock System In JavaScript</div>
         <div class="Digital_Clock">
@@ -109,10 +150,10 @@
                 <hr>
                 <div class="jscode" id="date"></div>
             </div>
-            
+
 
         </div>
-       
+
     </div>
 
     <script>
